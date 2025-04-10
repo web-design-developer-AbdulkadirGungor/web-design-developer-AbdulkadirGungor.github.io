@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Başlık ve Meta Etiketleri Yedinci Kez, "Dijital Bahçıvanlık" Temasıyla Özgünleştirildi -->
+    <title>Abdulkadir Güngör - Web Design & Developer | Dijital Bahçıvanlık: Kodla Yaşam Alanları Yaratmak</title>
+    <meta name="description" content="Abdulkadir Güngör ile Web Tasarım ve Geliştirme'nin organik dünyasına bir bakış. Kod toprağını işlemek, kullanıcı deneyimi bahçeleri tasarlamak, teknoloji araçlarıyla bakım yapmak ve etik sürdürülebilirlik üzerine felsefi bir bahçıvanlık rehberi.">
+    <meta name="keywords" content="Abdulkadir Güngör, Web Design, Web Developer, Dijital Bahçıvanlık, Kod Ekosistemi, Frontend Filizleri, Backend Kökleri, Fullstack Peyzajı, JavaScript Can Suyu, HTML Tohumları, CSS Bahçe Düzeni, Teknoloji Araçları, Deneyim Tasarımı Bahçesi, Organik Arayüzler, Duyarlı Bahçecilik, Mobil Ekosistem, CV Hasat Raporu, Özgeçmiş Fidanlığı, Github Tohum Bankası, Linkedin Bahçıvan Ağı, Kod Etiği, Sürdürülebilir Geliştirme, Kullanıcı Odaklı Peyzaj, Siber Güvenlik Zararlıları">
+    <meta name="author" content="Abdulkadir Güngör">
+
+    <style>
+        /* Genel Resetleme ve Temel Ayarlar */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px; /* Responsive font boyutu için temel */
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: #f9f9f9;
+            overflow-x: hidden; /* Yatay kaydırmayı engelle */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Konteyner */
+        .container {
+            width: 90%;
+            max-width: 1100px; /* İçeriğin okunabilir genişliği */
+            margin: 0 auto;
+            padding: 2rem 1rem; /* Üst/alt ve yan boşluklar */
+        }
+
+        /* Ana İçerik Alanı */
+        main {
+            flex-grow: 1; /* Footer'ı sayfanın altına itmek için */
+        }
+
+        /* Başlıklar */
+        h1, h2, h3, h4 {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3rem); /* Responsive başlık boyutu */
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 0.5rem;
+            color: #0056b3;
+        }
+
+        h2 {
+            font-size: clamp(1.5rem, 4vw, 2.2rem);
+            margin-top: 2.5rem;
+            color: #2c3e50;
+            border-left: 4px solid #007bff;
+            padding-left: 0.8rem;
+        }
+
+        h3 {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            margin-top: 2rem;
+            color: #34495e;
+        }
+
+        /* Paragraflar */
+        p {
+            margin-bottom: 1.2rem;
+            font-size: clamp(1rem, 2.5vw, 1.1rem); /* Responsive metin boyutu */
+            text-align: justify;
+        }
+
+        /* Bağlantılar */
+        a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease, text-decoration 0.3s ease;
+        }
+
+        a:hover, a:focus {
+            color: #0056b3;
+            text-decoration: underline;
+            outline: 2px solid transparent; /* Odaklanma stilini belirginleştir */
+            outline-offset: 2px;
+        }
+
+        /* Kod Blokları (Örnek) */
+        pre {
+            background-color: #2d2d2d;
+            color: #f0f0f0;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto; /* Uzun kod satırları için kaydırma */
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+            margin: 1.5rem 0;
+            white-space: pre-wrap; /* Satırları sar */
+            word-wrap: break-word; /* Kelimeleri böl */
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #e9ecef;
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+
+        pre code {
+            background-color: transparent;
+            padding: 0;
+            border-radius: 0;
+            font-size: inherit; /* Pre içindeki code için boyut ayarı */
+        }
+
+        /* Listeler */
+        ul, ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Alıntılar */
+        blockquote {
+            border-left: 5px solid #007bff;
+            margin: 1.5rem 0;
+            padding: 1rem 1.5rem;
+            background-color: #e9ecef;
+            font-style: italic;
+            color: #555;
+        }
+
+        blockquote p {
+            margin-bottom: 0;
+        }
+
+        /* Resimler (Eğer eklenirse) */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 1.5rem auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Ayırıcı Çizgi */
+        hr {
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0));
+            margin: 3rem 0;
+        }
+
+        /* Footer */
+        .site-footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 2rem 1rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem; /* Bağlantılar arası boşluk */
+        }
+
+        .footer-links li {
+            margin-bottom: 0; /* Liste elemanlarının alt boşluğunu kaldır */
+        }
+
+        .footer-links a {
+            color: #ecf0f1;
+            font-weight: bold;
+        }
+
+        .footer-links a:hover, .footer-links a:focus {
+            color: #bdc3c7;
+            text-decoration: underline;
+        }
+
+        .copyright {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            font-size: 0.9rem;
+            color: #bdc3c7;
+            margin-top: 1rem;
+        }
+
+        /* Responsive Tasarım Ayarlamaları */
+
+        /* Tabletler ve Küçük Masaüstleri (768px ve üzeri) */
+        @media (min-width: 768px) {
+            .container {
+                width: 85%;
+                padding: 2.5rem 1.5rem;
+            }
+            p {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Büyük Masaüstleri (1024px ve üzeri) */
+        @media (min-width: 1024px) {
+            .container {
+                width: 80%;
+                /* max-width: 1100px; */ /* Zaten yukarıda tanımlı */
+            }
+            /* Belki font boyutunu biraz daha ayarlayabiliriz */
+        }
+
+        /* Erişilebilirlik İyileştirmeleri */
+        *:focus {
+            outline: 3px dashed #0056b3;
+            outline-offset: 2px;
+        }
+        /* Odaklanma stillerini sadece klavye ile gezinildiğinde göstermek için (opsiyonel) */
+        body:not(.user-is-tabbing) *:focus {
+            outline: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <!-- Başlık Aynı Kalıyor -->
+            <h1>Abdulkadir Güngör - Web Design & Developer</h1>
+        </header>
+
+        <main>
+            <!-- İçerik Yedinci Kez, "Dijital Bahçıvanlık" Temasıyla Yeniden Yazıldı -->
+            <section id="giris-yedinci">
+                <h2>Tohum Ekimi: Fikirleri Dijital Bir Bahçeye Dönüştürmek</h2>
+                <p>
+                    Web tasarımı ve geliştirme, bir bahçıvanın boş bir araziyi alıp onu yaşayan, nefes alan, estetik ve işlevsel bir bahçeye dönüştürme sürecine benzer. Her proje, potansiyeli olan bir toprak parçasıdır; içinde filizlenecek fikirler (gereksinimler), büyüyecek yapılar (özellikler) ve ziyaretçilerini ağırlayacak patikalar (kullanıcı arayüzleri) barındırır. Ben, <strong>Abdulkadir Güngör</strong>, bu dijital bahçelerin tasarımcısı ve bakıcısı olarak, sadece güzel görünen değil, aynı zamanda sağlıklı, sürdürülebilir ve ziyaretçilerine (kullanıcılarına) keyif veren ekosistemler yaratmayı hedefliyorum. Bu metin, bir <strong>Web Design & Developer</strong> gözüyle, kod toprağının verimliliğine, deneyim peyzajının tasarımına ve bu organik yaratım sürecinin felsefesine bir yolculuktur. Web, sürekli yeni türlerin ekildiği, mevsimlerin değiştiği ve özenli bakım gerektiren dinamik bir küresel bahçedir.
+                </p>
+                <p>
+                    Her bahçe, bir vizyonla başlar: belki gölge veren ulu ağaçlar (karmaşık backend sistemleri), belki rengarenk çiçek tarhları (çekici frontend arayüzleri), belki de sebze yetiştirilecek verimli alanlar (veri odaklı uygulamalar). Bahçıvan (geliştirici), toprağı (teknik altyapıyı) analiz eder, uygun tohumları (teknolojileri) seçer ve bahçenin genel planını (mimarisini) oluşturur. Bu, sadece teknik bilgi (ziraat bilgisi) değil, aynı zamanda estetik anlayış (peyzaj tasarımı), sabır ve doğaya (kullanıcı ihtiyaçlarına) saygı gerektirir. Kendi yetiştirdiğim dijital bahçeleri ve bahçıvanlık felsefemi <a href="https://abdulkadirgungor.com" target="_blank" rel="noopener noreferrer">Abdulkadir Güngör</a> adresindeki seramda ve farklı türdeki bitkilerimi (projelerimi) sergilediğim <a href="https://abdulkadirgungor86.github.io/" target="_blank" rel="noopener noreferrer">Abdulkadir Güngör - Kişisel Web Site</a> fidanlığımda görebilirsiniz.
+                </p>
+            </section>
+
+            <hr>
+
+            <section id="kod-topragi">
+                <h2>Kod Toprağının Sağlığı: Yapısal Verimlilik ve Temiz Kod Kültürü</h2>
+                <p>
+                    Kodlama, dijital bahçenin temelini oluşturan toprağı işlemektir. Toprağın kalitesi (kodun kalitesi), üzerine ekilecek bitkilerin (özelliklerin) ne kadar sağlıklı büyüyeceğini, ne kadar verimli olacağını ve dış etkenlere karşı ne kadar dayanıklı olacağını belirler. İyi işlenmiş bir kod toprağı, sadece doğru besinleri (komutları) içermekle kalmaz, aynı zamanda iyi havalandırılmış (okunabilir), düzenli (yapılandırılmış) ve yabani otlardan (gereksiz kodlardan) arındırılmış olmalıdır. Kodun yapısı, kullanılan gübreler (tasarım desenleri) ve sulama teknikleri (algoritmalar), toprağın uzun vadeli sağlığını ve verimliliğini garanti eder.
+                </p>
+                <p>
+                    Toprağın sağlığı, temiz kod kültürünün benimsenmesiyle korunur. Anlaşılır isimlendirme (bitki etiketleri), modüler tarhlar (bileşenler), düzenli bakım (kod incelemeleri) ve kompostlama (yeniden kullanılabilir kod) gibi pratikler, toprağın verimliliğini artırır ve gelecekteki ekimleri (geliştirmeleri) kolaylaştırır. Sağlıklı bir toprak, ziyaretçinin (kullanıcının) bahçede gezinirken aldığı keyfi, karşılaştığı bitkilerin (arayüzün) canlılığını ve genel atmosferin (performansın) kalitesini doğrudan etkiler. Verimli toprak, bereketli hasat demektir. Kendi toprak işleme tekniklerimi ve tohum çeşitlerimi <a href="https://github.com/abdulkadirgungor86" target="_blank" rel="noopener noreferrer">Abdulkadir Güngör Github Yazılım</a> tohum bankamda paylaşıyorum. Bahçemi zararlılardan (güvenlik tehditlerinden) koruma yöntemlerim ise <a href="https://github.com/abdulkadir-gungor" target="_blank" rel="noopener noreferrer">Abdulkadir Güngör Github CyberSecurity</a> sayfasında ayrıntılı olarak yer almaktadır.
+                </p>
+                <blockquote>
+                    "Bir bahçe, sadece bitkilerin büyüdüğü bir yer değil, ruhun da beslendiği bir sığınaktır." – (Uyarlanmış Bahçıvanlık Özdeyişi) (İyi tasarlanmış bir web sitesi de kullanıcıya sadece bilgi sunmaz, keyifli bir deneyim yaşatır.)
+                </blockquote>
+                <p>
+                    İşlediğimiz toprak ve ektiğimiz tohumlar, sadece makineler için değil, aynı zamanda bizimle birlikte çalışan diğer bahçıvanlar (geliştiriciler) ve bizden sonra bu bahçeye bakacak olanlar içindir. Bu nedenle, kodun açıklığı ve yapısal sağlığı, sadece teknik bir gereklilik değil, aynı zamanda kolektif bir bahçıvanlık bilgeliğinin ve işbirliğinin temelidir.
+                </p>
+            </section>
+
+            <hr>
+
+            <section id="deneyim-peyzaji">
+                <h2>Deneyim Peyzajı: Kullanıcı Odaklı Bahçe Düzeni ve Erişilebilirlik</h2>
+                <p>
+                    Bir web sitesi veya uygulama, kullanıcının içinde gezindiği, keşfettiği ve etkileşimde bulunduğu bir dijital bahçedir. Bu bahçenin tasarımı, sadece estetik bir düzenleme değil, aynı zamanda ziyaretçinin yolunu kolaylaştıran, ona keyifli keşifler sunan ve her köşesini rahatça deneyimlemesini sağlayan bir peyzaj mimarisidir. <strong>Abdulkadir Güngör</strong> olarak amacım, bu "deneyim peyzajını" ziyaretçiyi (kullanıcıyı) düşünerek tasarlamak; teknolojinin karmaşık yapısını herkesin rahatça gezebileceği, estetik ve işlevsel bir bahçeye dönüştürmektir.
+                </p>
+                <p>
+                    Kullanıcı Deneyimi (UX) tasarımı, bu peyzajı planlamadan önceki arazi etüdüdür; ziyaretçinin kim olduğunu, bahçeden ne beklediğini, hangi yolları tercih edeceğini ve hangi engellerle karşılaşabileceğini anlamayı içerir. Kullanıcı Arayüzü (UI) tasarımı ise bahçenin kendisidir; patikalar (navigasyon), oturma alanları (içerik blokları), çiçek tarhları (görsel öğeler), yönlendirme tabelaları (butonlar, ikonlar) ve bilgilendirme panoları (metinler) aracılığıyla ziyaretçiye rehberlik eder ve bahçeye estetik bir kimlik kazandırır. İyi tasarlanmış bir peyzaj, ziyaretçinin kaybolmadan, yorulmadan ve bahçenin her köşesinden keyif alarak gezmesini sağlar. Bu peyzajları oluşturma konusundaki deneyimlerimi ve bitki koleksiyonumu <a href="https://abdulkadirgungor86.github.io/cv" target="_blank" rel="noopener noreferrer">Abdulkadir Güngör - Özgeçmiş CV</a> hasat raporumda bulabilirsiniz.
+                </p>
+                <p>
+                    Bu bahçenin farklı mevsimlerde ve farklı hava koşullarında (farklı cihazlarda ve ekran boyutlarında) da güzelliğini ve kullanışlılığını koruması gerekir. Responsive (duyarlı) tasarım, bahçenin farklı koşullara uyum sağlama yeteneğidir. Patikaların genişliği, bitkilerin düzeni ve genel yerleşimin (içeriğin ve işlevselliğin), ziyaretçinin kullandığı araca (masaüstü, tablet, mobil) göre dinamik olarak ayarlanması, bahçenin her zaman erişilebilir ve keyifli kalmasını sağlar. Bu, katı geometrik şekiller yerine, organik, akışkan ve uyarlanabilir bir peyzaj anlayışı gerektirir. Tıpkı bir bahçenin her mevsim farklı bir güzellik sunması gibi, iyi bir web deneyimi de farklı ekranlarda değerini korumalıdır. Bu, hem teknik bahçıvanlık becerisi hem de her ziyaretçiye en iyi deneyimi sunma arzusudur.
+                </p>
+            </section>
+
+            <hr>
+
+            <section id="bahcivanin-bilgeligi">
+                <h2>Bahçıvanın Bilgeliği: Teknoloji Araçları ve Yaratıcı Ekim Teknikleri</h2>
+                <p>
+                    Web geliştirme, hem bilinen bahçıvanlık tekniklerini uygulamayı hem de yeni bitkiler yetiştirmek veya daha iyi verim almak için yaratıcı yöntemler denemeyi gerektirir. Teknoloji (programlama dilleri, kütüphaneler, framework'ler) bize çeşitli araçlar (çapa, tırmık, budama makası) ve tohumlar sunar, ancak usta bir bahçıvan sadece bu araçları kullanmakla kalmaz, aynı zamanda toprağın dilini anlar, bitkilerin ihtiyaçlarını bilir ve bazen de en iyi sonucu almak için kendi tekniklerini geliştirir. Bir <strong>Web Design & Developer</strong> olarak bahçıvanın rolü, sadece elindeki araçları kullanmak değil, aynı zamanda toprağın potansiyelini görmek, farklı bitkileri uyum içinde bir araya getirmek ve bahçeye kendi özgün dokunuşunu katmaktır. Yaratıcılık burada sadece yeni çiçekler ekmek değil, aynı zamanda mevcut bitkileri daha sağlıklı büyütmek veya bahçenin genel düzeninde yenilikçi çözümler bulmaktır.
+                </p>
+                <p>
+                    Her teknoloji aracı belirli bir iş için daha uygundur ve doğru kullanılmadığında toprağa veya bitkilere zarar verebilir. Bir aracı ustaca kullanmak, sadece nasıl çalıştığını bilmek değil, aynı zamanda hangi toprak tipinde (proje türünde) etkili olduğunu, ne zaman budama (optimizasyon) gerektiğini ve diğer araçlarla (teknolojilerle) nasıl entegre edileceğini anlamaktır. Tecrübeli bir bahçıvan, her iş için doğru aracı seçer ve onu en verimli şekilde kullanır. Bu, sürekli gözlem (deneyim), deneme yanılma ve bilgi birikimi (teori öğrenme) gerektirir.
+                </p>
+                <p>
+                    Bu süreç, bahçıvanın bilgeliği (deneyim, sezgi) ile doğanın (teknolojinin) sunduğu olanakların birleşimidir. En güzel ve verimli bahçeler, bu ikisinin uyum içinde çalıştığı yerlerdir; teknoloji, bahçıvanın vizyonunu gerçekleştirmesine yardımcı olurken, bahçıvan da teknolojiyi doğaya saygılı ve sürdürülebilir bir şekilde kullanır. Bu bahçıvanlık süreçleri ve diğer bahçıvanlarla (geliştiricilerle) bilgi alışverişi yaptığım yerlerden biri <a href="https://www.linkedin.com/in/abdulkadir-güngör" target="_blank" rel="noopener noreferrer">Abdulkadir Güngör Linkedin</a> bahçıvan ağıdır. Tecrübe ve tohum paylaşımı, tüm bahçelerin daha zengin olmasına katkı sağlar.
+                </p>
+                 <p>
+                    Dijital bahçecilik alanı sürekli yeni tohumlar (teknolojiler), gübreler (araçlar) ve yetiştirme teknikleri (metodolojiler) ile gelişiyor. Bu durum, bahçıvanın sürekli yeni şeyler öğrenmesini ve yöntemlerini güncellemesini gerektiriyor. Gelecekte bahçıvanın rolü, belki daha az manuel çapalama (kodlama), daha çok bahçe tasarımı (mimari), otomatik sulama sistemlerini (yapay zeka araçları) yönetmek ve ekosistemin genel sağlığını (etik sonuçları) gözetmek olabilir. Ancak temel bahçıvanlık tutkusu – yetiştirme, büyütme, güzelleştirme ve bakım yapma arzusu – her zaman var olacaktır.
+                </p>
+            </section>
+
+            <hr>
+
+             <section id="etik-surdurulebilirlik">
+                <h2>Etik Sürdürülebilirlik: Sorumlu Bahçıvanlık ve Ekosistemin Korunması</h2>
+                <p>
+                    Dijital bahçelerimizi yaratırken ve büyütürken, sadece estetik veya verimlilik değil, aynı zamanda bu bahçelerin içinde yaşayan (kullanıcılar) ve etrafındaki ekosistem (toplum, çevre) üzerindeki etkilerini de düşünmeliyiz. Sorumlu bir bahçıvan olarak etik ilkeleri benimsemek, sadece sağlıklı bitkiler yetiştirmek değil, aynı zamanda toprağı korumak, suyu idareli kullanmak ve biyoçeşitliliği desteklemektir. Bir <strong>Web Design & Developer</strong> olarak, bu etik sürdürülebilirlik anlayışını her projeye entegre etmek, sadece iyi bir bahçıvanlık pratiği değil, aynı zamanda gelecek nesillere karşı bir sorumluluktur.
+                </p>
+                <p>
+                    Ziyaretçilerin mahremiyetine (bahçedeki özel alanlara) saygı göstermek ve kişisel bilgilerini (bahçeden topladıkları ürünleri) güvenli bir şekilde saklamak, sorumlu bahçıvanlığın temelidir. Hangi bilgilerin neden toplandığını şeffafça açıklamak, izin istemek ve bu değerli kaynakları zararlılardan (veri ihlallerinden) korumak esastır. Güvenlik açıkları, bahçeye sızan hastalıklar gibidir ve tüm ekosisteme zarar verebilir. Güvenli yetiştirme teknikleri uygulamak ve doğal savunma mekanizmaları oluşturmak (<a href="https://github.com/abdulkadir-gungor" target="_blank" rel="noopener noreferrer">Abdulkadir Güngör Github CyberSecurity</a>), bu etik sağlığı korumanın teknik yoludur. Güvenlik, hasattan sonra düşünülecek bir konu değil, tohum ekiminden itibaren planlanması gereken bir yaklaşımdır.
+                </p>
+                <p>
+                    Bahçenin tüm ziyaretçiler tarafından rahatça gezilebilir olması, etik peyzajın bir diğer önemli boyutudur. Tasarladığımız patikaların ve alanların, fiziksel veya bilişsel yetenekleri ne olursa olsun, herkes tarafından kolayca erişilebilir ve kullanılabilir olmasını sağlamalıyız. Erişilebilirlik standartlarına uymak, sadece belirli kuralları takip etmek değil, aynı zamanda farklı ihtiyaçlara sahip ziyaretçileri anlayan ve onlara uygun geçitler ve dinlenme alanları sunan kapsayıcı bir bahçe tasarımıdır. Erişilebilir bir bahçe, daha davetkar ve adildir.
+                </p>
+                 <p>
+                    Son olarak, bahçe tasarımımızın ve kullandığımız yetiştirme yöntemlerinin potansiyel olumsuz çevresel etkilerinin (algoritmik yanlılıklar, dijital kirlilik) farkında olmalıyız. Seçtiğimiz bitkiler (teknolojiler) veya sulama yöntemleri (algoritmalar), farkında olmadan ekosistemdeki dengesizlikleri artırabilir. Bu nedenle, çeşitliliği (farklı perspektifleri) teşvik etmek, kaynakları (enerji, veri) verimli kullanmak ve tasarımlarımızın uzun vadeli etkilerini sorgulamak gerekir. Etik sürdürülebilirlik, sürekli gözlem, öğrenme ve daha sağlıklı bir dijital ekosistem yaratma çabasıdır.
+                </p>
+            </section>
+
+            <hr>
+
+            <section id="gelecek-hasadi">
+                <h2>Gelecek Hasadı: Web'in Evrimi ve Bitmeyen Öğrenme Mevsimi</h2>
+                <p>
+                    Dijital bahçecilik dünyası sürekli değişiyor. Yeni iklim koşulları (teknolojik trendler) ortaya çıkıyor, yeni bitki türleri (teknolojiler) geliştiriliyor ve bahçıvanlık teknikleri (geliştirme metodolojileri) evriliyor. Yapay zekanın bahçe bakımına yardımcı olması, merkezi olmayan tohum bankaları (Web3), sanal seralarda yeni türler denemek (VR/AR), web'in gelecekteki hasadını şekillendiren yeniliklerden sadece birkaçı. Bu dinamik ortam, bir bahçıvan (geliştirici) için bitmeyen bir öğrenme mevsimi ve sürekli adaptasyon gerekliliği anlamına gelir.
+                </p>
+                <p>
+                    Bu sürekli değişen iklimde başarılı olmak, sadece yeni aletleri kullanmayı öğrenmek değil, aynı zamanda toprağın temel prensiplerini (mantık, problem çözme), bitki fizyolojisini (kullanıcı psikolojisi) ve ekosistem dengesini (etik ilkeler) anlamayı gerektirir. Merak, sabır ve öğrenme tutkusu, bu yolculukta en iyi gübrelerdir. Web geliştirme, belirli bir bitki türüne veya bahçe stiline saplanıp kalmak değil, bahçıvanlığın evrensel dilini anlamak ve yeni koşullara bu dil aracılığıyla uyum sağlayabilmektir.
+                </p>
+                <p>
+                    <strong>Abdulkadir Güngör</strong> olarak benim nihai hedefim, bu dijital bahçıvanlık sanatını kullanarak, teknoloji aracılığıyla insanların hayatını zenginleştiren, onlara huzur ve keyif veren, anlamlı ve sürdürülebilir yaşam alanları (dijital deneyimler) yaratmaktır. Bu bahçıvanlık felsefemin ürünlerini <a href="https://abdulkadirgungor.com" target="_blank" rel="noopener noreferrer">kişisel web sitemdeki</a> seramda, <a href="https://abdulkadirgungor86.github.io/" target="_blank" rel="noopener noreferrer">alternatif kişisel sitemdeki</a> fidanlıkta, <a href="https://abdulkadirgungor86.github.io/cv" target="_blank" rel="noopener noreferrer">özgeçmişimdeki</a> hasat kayıtlarında, <a href="https://github.com/abdulkadirgungor86" target="_blank" rel="noopener noreferrer">Github'daki tohum koleksiyonumda</a>, <a href="https://github.com/abdulkadir-gungor" target="_blank" rel="noopener noreferrer">güvenlik odaklı zararlı kontrolü yöntemlerimde</a> ve <a href="https://www.linkedin.com/in/abdulkadir-güngör" target="_blank" rel="noopener noreferrer">diğer bahçıvanlarla</a> olan iletişimimde görebilirsiniz. Gelecek hangi yeni tohumları veya iklim değişikliklerini getirirse getirsin, yetiştirme tutkusu ve daha güzel, daha sağlıklı bir dijital dünya yaratma arzusu, bu bitmeyen bahçıvanlık serüveninin temel motivasyonu olacaktır.
+                </p>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer ve Script Bölümü Değiştirilmedi -->
+    <footer class="site-footer">
+        <div class="container">
+            <ul class="footer-links">
+                <li><a href="https://abdulkadirgungor.com" target="_blank" rel="noopener noreferrer">Abdulkadir Güngör</a></li>
+                <li><a href="https://abdulkadirgungor86.github.io/" target="_blank" rel="noopener noreferrer">Kişisel Web Site</a></li>
+                <li><a href="https://abdulkadirgungor86.github.io/cv" target="_blank" rel="noopener noreferrer">Özgeçmiş CV</a></li>
+                <li><a href="https://github.com/abdulkadirgungor86" target="_blank" rel="noopener noreferrer">Github Yazılım</a></li>
+                <li><a href="https://github.com/abdulkadir-gungor" target="_blank" rel="noopener noreferrer">Github CyberSecurity</a></li>
+                <li><a href="https://www.linkedin.com/in/abdulkadir-güngör" target="_blank" rel="noopener noreferrer">Linkedin</a></li>
+            </ul>
+            <p class="copyright">© <span id="current-year"></span> Abdulkadir Güngör. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Basit bir script: Copyright yılı otomatik olarak güncellenir.
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Klavye ile gezinme tespiti (Erişilebilirlik için)
+        function handleFirstTab(e) {
+            if (e.key === 'Tab') { // 'Tab' tuşuna ilk basıldığında
+                document.body.classList.add('user-is-tabbing');
+                window.removeEventListener('keydown', handleFirstTab);
+                window.addEventListener('mousedown', handleMouseDownOnce); // Fare tıklamasını dinle
+            }
+        }
+
+        function handleMouseDownOnce() {
+            document.body.classList.remove('user-is-tabbing');
+            window.removeEventListener('mousedown', handleMouseDownOnce);
+            window.addEventListener('keydown', handleFirstTab); // Tekrar Tab dinlemeye başla
+        }
+
+        window.addEventListener('keydown', handleFirstTab);
+
+        console.log("Abdulkadir Güngör - Web Design & Developer sayfası (yedinci benzersiz içerik - Dijital Bahçıvanlık) başarıyla yüklendi.");
+        // Buraya daha fazla JavaScript kodu eklenebilir (örn. animasyonlar, interaktif öğeler vb.)
+    </script>
+
+</body>
+</html>
